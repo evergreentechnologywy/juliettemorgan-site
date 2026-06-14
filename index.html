@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Official portfolio website of Juliette Morgan - Fashion Model, Runway Muse, and Creative Collaborator." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script type="module" src="/src/main.js"></script>
+
+    <title>Juliette Morgan | Official Portfolio & Bookings</title>
+  </head>
+  <body>
+    <!-- Top Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Background Glow Blobs -->
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    <div class="glow-blob blob-3"></div>
+
+    <!-- Elegant Navigation Header -->
+    <header id="main-header">
+      <div class="header-container">
+        <a href="#home" class="logo-link" id="logo-brand">
+          <span class="logo-text">Juliette Morgan</span>
+        </a>
+        
+        <!-- Hamburger Menu Button -->
+        <button id="menu-toggle" aria-label="Toggle Navigation">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <nav id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active" id="nav-link-home">Home</a></li>
+            <li><a href="#portfolio" class="nav-link" id="nav-link-portfolio">Portfolio</a></li>
+            <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+            <li><a href="#booking" class="nav-link" id="nav-link-booking">Bookings</a></li>
+            <li><a href="#links" class="nav-link" id="nav-link-links">Connect</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main id="content-area">
+      
+      <!-- HERO SECTION -->
+      <section id="home" class="page-section active">
+        <div class="hero-container">
+          <div class="hero-content">
+            <span class="hero-subtitle">Editorial & High Fashion Model</span>
+            <h1 class="hero-title animate-text">Redefining Elegance</h1>
+            <p class="hero-description">
+              A striking presence on the runway and in front of the lens. Juliette Morgan brings artistic vision, grace, and storytelling to high-fashion campaigns worldwide.
+            </p>
+            <div class="hero-actions">
+              <a href="#portfolio" class="btn btn-primary" id="hero-btn-portfolio">Explore Portfolio</a>
+              <a href="#booking" class="btn btn-secondary" id="hero-btn-booking">Bookings Inquiry</a>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <div class="hero-image-card">
+              <img src="/images/hero.png" alt="Juliette Morgan Portrait" class="hero-img" id="hero-model-image" />
+              <div class="glass-tag">
+                <span class="tag-title">Juliette Morgan</span>
+                <span class="tag-meta">Height: 5'10" / 178cm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO / GALLERY SECTION -->
+      <section id="portfolio" class="page-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-subtitle">Visual Highlights</span>
+            <h2 class="section-title">The Portfolio</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <!-- Gallery Filters -->
+          <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all" id="filter-all">All Work</button>
+            <button class="filter-btn" data-filter="editorial" id="filter-editorial">Editorial</button>
+            <button class="filter-btn" data-filter="runway" id="filter-runway">Runway</button>
+            <button class="filter-btn" data-filter="campaign" id="filter-campaign">Campaigns</button>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="gallery-grid" id="gallery-grid">
+            
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item" data-category="editorial">
+              <div class="gallery-item-inner">
+                <img src="/images/hero.png" alt="Editorial Shoot - Studio Portrait" />
+                <div class="gallery-overlay">
+                  <div class="overlay-content">
+                    <span class="item-category">Editorial</span>
+                    <h3 class="item-title">Vogue Editorial Portrait</h3>
+                    <button class="zoom-btn" aria-label="Zoom Image"><i class="fa-solid fa-expand"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item" data-category="campaign">
+              <div class="gallery-item-inner">
+                <img src="/images/fashion.png" alt="Couture Campaign - Gold Gown" />
+                <div class="gallery-overlay">
+                  <div class="overlay-content">
+                    <span class="item-category">Campaign</span>
+                    <h3 class="item-title">Luxury Gown Campaign</h3>
+                    <button class="zoom-btn" aria-label="Zoom Image"><i class="fa-solid fa-expand"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item" data-category="runway">
+              <div class="gallery-item-inner">
+                <img src="/images/runway.png" alt="Runway - Paris Fashion Week" />
+                <div class="gallery-overlay">
+                  <div class="overlay-content">
+                    <span class="item-category">Runway</span>
+                    <h3 class="item-title">Paris Fashion Week Show</h3>
+                    <button class="zoom-btn" aria-label="Zoom Image"><i class="fa-solid fa-expand"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / BIOGRAPHY SECTION -->
+      <section id="about" class="page-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-subtitle">Biography</span>
+            <h2 class="section-title">About Juliette</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text-column">
+              <h3 class="about-heading">Behind the Beauty</h3>
+              <p class="about-p">
+                Based in Paris and New York, Juliette Morgan is an international fashion model known for her strong editorial presence, unique versatility, and captivating runway stride. Represented by leading global agencies, she has worked with prestigious luxury design houses, renowned cosmetics brands, and top-tier editorial publications.
+              </p>
+              <p class="about-p">
+                Known for her high professionalism, artistic expression, and collaborative spirit, Juliette continues to expand her boundaries across campaigns, runway shows, and artistic installations.
+              </p>
+
+              <!-- Statistics / Measurements Table -->
+              <h3 class="about-heading" style="margin-top: 2rem;">Stats & Measurements</h3>
+              <div class="stats-table">
+                <div class="stat-row">
+                  <span class="stat-label">Height</span>
+                  <span class="stat-value">5'10" / 178 cm</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Bust</span>
+                  <span class="stat-value">34" / 86 cm (B)</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Waist</span>
+                  <span class="stat-value">24" / 61 cm</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Hips</span>
+                  <span class="stat-value">35" / 89 cm</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Shoes</span>
+                  <span class="stat-value">8.5 US / 39 EU</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Hair</span>
+                  <span class="stat-value">Dark Brown</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Eyes</span>
+                  <span class="stat-value">Hazel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-image-column">
+              <div class="about-image-card">
+                <img src="/images/fashion.png" alt="Juliette Morgan Studio Shoot" />
+                <div class="image-overlay-card">
+                  <span class="quote-text">"Fashion is a language that creates itself in images."</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKINGS SECTION -->
+      <section id="booking" class="page-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-subtitle">Collaborate</span>
+            <h2 class="section-title">Secure a Booking</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="booking-grid">
+            <div class="booking-info-column">
+              <h3 class="booking-info-heading">Work with Juliette</h3>
+              <p class="booking-p">
+                For commercial campaigns, runway bookings, editorials, cosmetics sponsorships, and creative collaborations, please fill out the inquiry form.
+              </p>
+              <p class="booking-p">
+                Alternatively, you can reach out directly to her management at:
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>bookings@juliettemorgan.site</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>New York & Paris Agencies</span>
+                </div>
+              </div>
+
+              <div class="agency-logos">
+                <div class="agency-logo">Elite Model Mgmt</div>
+                <div class="agency-logo">Next Models</div>
+              </div>
+            </div>
+
+            <div class="booking-form-column">
+              <!-- Booking Form -->
+              <form id="booking-form" class="booking-form-card" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="booking-name">Full Name / Agency</label>
+                    <input type="text" id="booking-name" name="name" required placeholder="e.g. Vogue Creative Agency" />
+                    <span class="error-msg" id="name-error">Name is required</span>
+                  </div>
+                </div>
+
+                <div class="form-row split">
+                  <div class="form-group">
+                    <label for="booking-email">Email Address</label>
+                    <input type="email" id="booking-email" name="email" required placeholder="e.g. director@agency.com" />
+                    <span class="error-msg" id="email-error">Enter a valid email</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="booking-date">Proposed Date</label>
+                    <input type="date" id="booking-date" name="date" required />
+                    <span class="error-msg" id="date-error">Proposed date is required</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="booking-type">Project Type</label>
+                    <select id="booking-type" name="type" required>
+                      <option value="" disabled selected>Select an option...</option>
+                      <option value="editorial">Editorial / Magazine</option>
+                      <option value="runway">Runway / Fashion Show</option>
+                      <option value="campaign">Brand Campaign / Commercial</option>
+                      <option value="fitting">Fitting / Showroom</option>
+                      <option value="other">Other Collaboration</option>
+                    </select>
+                    <span class="error-msg" id="type-error">Please select a project type</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="booking-message">Project Details</label>
+                    <textarea id="booking-message" name="message" rows="5" required placeholder="Tell us about the project vision, location, photographer, and requirements..."></textarea>
+                    <span class="error-msg" id="message-error">Project details are required</span>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="booking-submit-btn">
+                  <span class="btn-text">Submit Booking Inquiry</span>
+                  <span class="spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                </button>
+              </form>
+
+              <!-- Success Alert Message -->
+              <div id="booking-success" class="booking-success-card hidden">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Inquiry Submitted Successfully</h3>
+                <p>Thank you for your interest in working with Juliette Morgan. Her representation team will review your project details and respond within 24-48 hours.</p>
+                <button class="btn btn-secondary" id="success-back-btn">Send Another Inquiry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINKS PAGE SECTION (MOBILE-FIRST CONNECTION CARD) -->
+      <section id="links" class="page-section">
+        <div class="links-page-container">
+          <div class="links-profile">
+            <img src="/images/hero.png" alt="Juliette Morgan Avatar" class="links-avatar" />
+            <h2 class="links-name">@juliettemorgan</h2>
+            <p class="links-bio">High Fashion & Runway Model | NY, Paris, London</p>
+          </div>
+
+          <div class="links-list">
+            
+            <a href="#booking" class="links-item highlight" id="links-item-booking">
+              <span class="links-item-icon"><i class="fa-solid fa-calendar-days"></i></span>
+              <span class="links-item-text">Book Juliette Morgan</span>
+              <span class="links-item-badge">Inquire</span>
+            </a>
+
+            <a href="#portfolio" class="links-item" id="links-item-portfolio">
+              <span class="links-item-icon"><i class="fa-solid fa-images"></i></span>
+              <span class="links-item-text">Official Portfolio Gallery</span>
+            </a>
+
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="links-item" id="links-item-instagram">
+              <span class="links-item-icon"><i class="fa-brands fa-instagram"></i></span>
+              <span class="links-item-text">Follow on Instagram</span>
+            </a>
+
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="links-item" id="links-item-tiktok">
+              <span class="links-item-icon"><i class="fa-brands fa-tiktok"></i></span>
+              <span class="links-item-text">Official TikTok</span>
+            </a>
+
+            <a href="https://vogue.com" target="_blank" rel="noopener noreferrer" class="links-item" id="links-item-vogue">
+              <span class="links-item-icon"><i class="fa-solid fa-star"></i></span>
+              <span class="links-item-text">Vogue Model Profile</span>
+            </a>
+
+            <a href="mailto:contact@juliettemorgan.site" class="links-item" id="links-item-email">
+              <span class="links-item-icon"><i class="fa-solid fa-envelope"></i></span>
+              <span class="links-item-text">Direct Inquiry Email</span>
+            </a>
+
+          </div>
+
+          <!-- Social Shortcuts -->
+          <div class="links-social-icons">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY ZOOM -->
+    <div id="lightbox" class="lightbox-modal">
+      <span class="lightbox-close" id="lightbox-close-btn">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" alt="Zoomed View" />
+      <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Elegant Footer -->
+    <footer id="main-footer">
+      <div class="footer-container">
+        <p class="footer-copyright">&copy; 2026 Juliette Morgan. All Rights Reserved.</p>
+        <p class="footer-credit">Designed with luxury, power, and elegance.</p>
+      </div>
+    </footer>
+  </body>
+</html>
