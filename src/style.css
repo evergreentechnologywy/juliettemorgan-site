@@ -15,9 +15,9 @@
   --text-muted: #8e8e9c;
   --text-white: #ffffff;
   
-  --glass-bg: rgba(14, 14, 18, 0.7);
-  --glass-border: rgba(197, 168, 128, 0.15);
-  --glass-border-hover: rgba(197, 168, 128, 0.3);
+  --glass-bg: rgba(14, 14, 18, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-hover: rgba(197, 168, 128, 0.6);
   
   /* Fonts */
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -167,7 +167,7 @@ p {
   letter-spacing: 2px;
   text-decoration: none;
   border-radius: 30px;
-  transition: var(--transition-smooth);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -198,8 +198,8 @@ p {
 .btn-primary:hover {
   background-color: var(--bg-dark);
   color: var(--accent-gold);
-  box-shadow: 0 8px 25px rgba(197, 168, 128, 0.4);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(197, 168, 128, 0.25);
+  transform: translateY(-4px);
 }
 
 .btn-secondary {
@@ -211,7 +211,8 @@ p {
 .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: var(--accent-gold);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
 }
 
 .btn-block {
@@ -515,8 +516,10 @@ p {
   right: 2rem;
   padding: 1.2rem 1.5rem;
   background: var(--glass-bg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
   border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.05);
   border-radius: var(--border-radius-md);
   display: flex;
   flex-direction: column;
