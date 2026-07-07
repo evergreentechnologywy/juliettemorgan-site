@@ -85,10 +85,13 @@ main() {
   ensure_tailscale_installed
   start_tailscaled
 
-  local up_args=(--hostname="$HOSTNAME_VALUE" --ssh --accept-routes)
-  if authkey="$(read_authkey 2>/dev/null || true)" && [ -n "$authkey" ]; then
-    up_args+=(--auth-key="$authkey")
+  local authkey
+  if ! authkey="$(read_authkey 2>/dev/null)" || [ -z "$authkey" ]; then
+    echo "ERROR: no Tailscale auth key; set TS_AUTHKEY, TAILSCALE_AUTHKEY, or bootstrap/.tailscale.authkey" >&2
+    exit 1
   fi
+
+  local up_args=(--hostname="$HOSTNAME_VALUE" --ssh --accept-routes --auth-key="$authkey")
 
   sudo tailscale --socket="$TS_SOCKET" up "${up_args[@]}"
   tailscale --socket="$TS_SOCKET" status

@@ -28,7 +28,7 @@ if [ -z "$ip" ]; then
   exit 1
 fi
 
-if ss -tlnp 2>/dev/null | grep -q ':22'; then
+if ss -tln sport = :22 2>/dev/null | grep -q .; then
   echo "OpenSSH listening on :22 (Tailscale SSH also enabled)"
 else
   echo "Tailscale SSH-only (no listener on :22)"
