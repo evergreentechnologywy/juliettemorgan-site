@@ -8,6 +8,10 @@ TS_PIDFILE="${TS_PIDFILE:-/var/run/tailscale/tailscaled.pid}"
 HOSTNAME_VALUE="${FLEET_HOSTNAME:-${HOSTNAME:-$(hostname -s)}}"
 
 read_authkey() {
+  if [ -n "${TAILSCALE_AUTH_KEY:-}" ]; then
+    printf '%s' "$TAILSCALE_AUTH_KEY"
+    return 0
+  fi
   if [ -n "${TS_AUTHKEY:-}" ]; then
     printf '%s' "$TS_AUTHKEY"
     return 0
@@ -87,7 +91,7 @@ main() {
 
   local authkey
   if ! authkey="$(read_authkey 2>/dev/null)" || [ -z "$authkey" ]; then
-    echo "ERROR: no Tailscale auth key; set TS_AUTHKEY, TAILSCALE_AUTHKEY, or bootstrap/.tailscale.authkey" >&2
+    echo "ERROR: no Tailscale auth key; set TAILSCALE_AUTH_KEY, TS_AUTHKEY, TAILSCALE_AUTHKEY, or bootstrap/.tailscale.authkey" >&2
     exit 1
   fi
 
