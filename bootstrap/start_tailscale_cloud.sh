@@ -37,15 +37,6 @@ tailscaled_ready() {
   tailscale --socket="$TS_SOCKET" debug prefs >/dev/null 2>&1
 }
 
-ensure_tun() {
-  if [ -e /dev/net/tun ]; then
-    return 0
-  fi
-  sudo mkdir -p /dev/net
-  sudo mknod /dev/net/tun c 10 200
-  sudo chmod 0666 /dev/net/tun
-}
-
 ensure_tailscale_installed() {
   if command -v tailscale >/dev/null 2>&1; then
     return 0
@@ -54,7 +45,6 @@ ensure_tailscale_installed() {
 }
 
 start_tailscaled() {
-  ensure_tun
   sudo mkdir -p /var/run/tailscale /var/lib/tailscale
 
   if tailscaled_ready; then
